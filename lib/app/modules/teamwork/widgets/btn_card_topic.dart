@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 
-class BtnCardGroup extends StatelessWidget {
-  const BtnCardGroup({super.key, required this.onTap});
+class BtnCardTopic extends StatelessWidget {
+  const BtnCardTopic({
+    super.key,
+    required this.onTap,
+    required this.title,
+  });
 
   final void Function()? onTap;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +39,7 @@ class BtnCardGroup extends StatelessWidget {
                     color: Colors.grey.shade800,
                     padding: EdgeInsets.all(8),
                     child: Text(
-                      'Grupo Sanborns',
+                      title,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
